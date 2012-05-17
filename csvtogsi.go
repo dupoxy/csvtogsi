@@ -25,18 +25,6 @@ func (d debugging) Printf(format string, args ...interface{}) {
 	}
 }
 
-// Input mimik a csv Exel file.
-/* var Input = `num point;x;y;z
-5001;793905,635;87528,582;210,66
-5002;793964,169;87547,069;211,01
-1;793971,847;87572,175;210,74
-2;794020,145;87571,815;211,16
-3;794020,026;87555,815;211,16
-4;793964,827;87556,226;210,66
-5;793964,827;87556,226;210,6
-6;793964,827;87556,226;210
-` */
-
 // ExelCsvNewReader returns a new csv.Reader that reads from r with comma cet to ';'.
 func ExelCsvNewReader(r io.Reader) *csv.Reader {
 	// func NewReader(r io.Reader) *Reader
@@ -90,13 +78,12 @@ func FixStringLen(slice string, x int) string {
 }
 
 func main() {
-	// ReadInput to mimik a file been read.
-	// var ReadInput = strings.NewReader(Input)
+	// ReadInput .
 	Input, err := ioutil.ReadFile("test.csv")
 	if err != nil { // check for error
 		fmt.Println(err)
 	}
-	r := ExelCsvNewReader(bytes.NewReader(Input)) // was ExelCsvNewReader(ReadInput)
+	r := ExelCsvNewReader(bytes.NewReader(Input))
 	// func (r *Reader) ReadAll() (records [][]string, err error)
 	out, err := r.ReadAll()
 	if err != nil { // check for error
