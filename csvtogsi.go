@@ -15,7 +15,7 @@ import (
 )
 
 // for debugging
-const debug debugging = true // or flip to false
+const debug debugging = false // or flip to true
 
 type debugging bool
 
