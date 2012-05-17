@@ -6,6 +6,7 @@ package main
 import (
 	"bytes"
 	"encoding/csv"
+	"flag"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -78,8 +79,10 @@ func FixStringLen(slice string, x int) string {
 }
 
 func main() {
+	file := flag.String("file", "test.csv", "Set the file to import")
+	flag.Parse()
 	// ReadInput .
-	Input, err := ioutil.ReadFile("test.csv")
+	Input, err := ioutil.ReadFile(*file)
 	if err != nil { // check for error
 		fmt.Println(err)
 	}
