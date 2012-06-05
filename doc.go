@@ -5,12 +5,12 @@ on windows:
 	set GOPATH=C:\...\mygsi
 on linux:
 	export GOPATH=$HOME/mygsi
-	
+
 To Install
 
 	go get -u dupoxy.ouvaton.org/p/go/csvtogsi/
 	go install dupoxy.ouvaton.org/p/go/csvtogsi/
-	
+
 To run
 
 goto your GOPATH bin dir and run
