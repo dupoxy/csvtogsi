@@ -1,7 +1,7 @@
 csvtogsi
 ========
 
-Please go to http://dupoxy.ouvaton.org/p/go/csvtogsi/
+Please go to http://godoc.org/github.com/dupoxy/csvtogsi/
 for more info.
 
 
